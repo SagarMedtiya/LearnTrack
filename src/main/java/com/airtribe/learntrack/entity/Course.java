@@ -1,5 +1,6 @@
 package com.airtribe.learntrack.entity;
 
+import com.airtribe.learntrack.enums.CourseStatus;
 import lombok.Data;
 
 @Data
@@ -8,13 +9,16 @@ public class Course {
     private String courseName;
     private String description;
     private int durationInWeeks;
-    private boolean active;
+    private CourseStatus status;
 
     public Course(int id, String courseName, String description, int durationInWeeks){
         this.id = id;
         this.courseName = courseName;
         this.description = description;
         this.durationInWeeks = durationInWeeks;
-        this.active = true;
+        this.status = CourseStatus.ACTIVE;
+    }
+    public boolean isActive(){
+        return status == CourseStatus.ACTIVE;
     }
 }

@@ -1,4 +1,5 @@
 package com.airtribe.learntrack.enums;
 
-public class EnrollmentStatus {
+public enum EnrollmentStatus {
+    ENROLLED, CANCELLED, COMPLETED
 }
